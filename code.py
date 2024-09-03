@@ -36,8 +36,8 @@ plt.figure(figsize=(8, 6))
 sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt='.2f', linewidths=0.5)
 plt.title('Correlation Matrix for Production and Area')
 plt.show()
-#We see that Area and Production are positively correlated 
 
+#We see that Area and Production are positively correlated 
 #So instead of dropping the Null values of Production we can imputate them using Linear Regression as the correlation is strong
 train_data=df[df['Production'].notnull()]
 test_data=df[df['Production'].isnull()]
